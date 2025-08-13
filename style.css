@@ -1,0 +1,241 @@
+/* ================================
+   GLOBAL STYLES
+=================================== */
+:root {
+  --green: #3c6e47;
+  --brown: #8b5e3c;
+  --gold: #d4a017;
+  --light-bg: #f9f7f3;
+  --dark-text: #2e2e2e;
+  --light-text: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+/* ================================
+   NAVIGATION
+=================================== */
+header {
+  background-color: var(--green);
+  color: var(--light-text);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  margin: 0 0.8rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* ================================
+   HERO SECTION
+=================================== */
+.hero {
+  background: linear-gradient(to right, rgba(60,110,71,0.8), rgba(212,160,23,0.8)),
+              url('/static/images/hero-banner.jpg') center/cover no-repeat;
+  color: var(--light-text);
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: var(--gold);
+  color: var(--dark-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--brown);
+  color: var(--light-text);
+  transform: scale(1.05);
+}
+
+/* ================================
+   PRODUCT GRID
+=================================== */
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-card .content {
+  padding: 1rem;
+}
+
+.product-card h3 {
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.price {
+  color: var(--brown);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   ABOUT & PROCESS PAGES
+=================================== */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--green);
+}
+
+/* ================================
+   CONTACT FORM
+=================================== */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+form button {
+  background-color: var(--green);
+  color: var(--light-text);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--gold);
+  color: var(--dark-text);
+}
+
+/* ================================
+   FOOTER
+=================================== */
+footer {
+  background-color: var(--brown);
+  color: var(--light-text);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ================================
+   RESPONSIVE
+=================================== */
+@media (min-width: 600px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    padding: 1rem 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Fade-in scroll animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

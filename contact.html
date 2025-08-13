@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Contact — Prakrutik Tattva{% endblock %}
+
+{% block content %}
+<section class="contact">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Have a question or want to place an order? Send us a message or reach out on WhatsApp.</p>
+
+    <form id="contactForm" action="{{ url_for('contact_submit') }}" method="post" novalidate>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="prakrutiktattva@gmail.com">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required placeholder="+919594959557">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Send Message</button>
+        <a class="btn outline" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Prakrutik%20Tattva%2C%20I%20want%20to%20order.">Order on WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}

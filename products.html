@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Products — Prakrutik Tattva{% endblock %}
+
+{% block content %}
+<section class="products">
+  <div class="container">
+    <h1>Our Oils</h1>
+    <p>Explore our range of 100% wood-pressed oils.</p>
+
+    <ul class="product-list">
+      <!-- Sunflower -->
+      <li id="sunflower" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/sunflower.jpg') }}" alt="Sunflower Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Sunflower Oil</h2>
+          <p>Light texture, neutral flavor — great for salads and everyday cooking.</p>
+          <p class="price">₹250 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Sunflower%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+
+      <!-- Safflower -->
+      <li id="safflower" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/safflower.jpg') }}" alt="Safflower Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Safflower Oil</h2>
+          <p>High smoke point and mild taste — ideal for high-heat cooking.</p>
+          <p class="price">₹300 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Safflower%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+
+      <!-- Groundnut -->
+      <li id="groundnut" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/groundnut.jpg') }}" alt="Groundnut Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Groundnut Oil</h2>
+          <p>Traditional flavor for Indian cuisine with a robust aroma.</p>
+          <p class="price">₹220 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Groundnut%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+
+      <!-- Sesame -->
+      <li id="sesame" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/sesame.jpg') }}" alt="Sesame Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Sesame Oil</h2>
+          <p>Nutty aroma, used for seasoning and traditional dishes.</p>
+          <p class="price">₹260 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Sesame%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+
+      <!-- Mustard -->
+      <li id="mustard" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/mustard.jpg') }}" alt="Mustard Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Mustard Oil</h2>
+          <p>Strong flavour, traditional use in many Indian cuisines.</p>
+          <p class="price">₹200 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Mustard%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+
+      <!-- Coconut -->
+      <li id="coconut" class="product">
+        <div class="product-media">
+          <img src="{{ url_for('static', filename='images/coconut.jpg') }}" alt="Coconut Oil" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h2>Coconut Oil</h2>
+          <p>Versatile oil for cooking and personal care — cold-pressed goodness.</p>
+          <p class="price">₹280 / 500ml</p>
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Coconut%20Oil%20500ml">Buy on WhatsApp</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

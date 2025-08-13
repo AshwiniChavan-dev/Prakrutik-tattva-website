@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}Home — Prakrutik Tattva{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Pure. Natural. Prakrutik.</h1>
+      <p>Traditional wood-pressed edible oils made the natural way — nutritious, unrefined, and full of flavour.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Prakrutik%20Tattva%2C%20I%20want%20to%20order.">Order on WhatsApp</a>
+        <a class="btn outline" href="{{ url_for('products') }}">View Products</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='images/hero-bottle.jpg') }}" alt="Bottles of wood pressed oil" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="product-highlights">
+  <div class="container">
+    <h2>Featured Oils</h2>
+    <p>Hand-picked selection from our traditional cold-pressing process.</p>
+
+    <ul class="product-grid">
+      <!-- Product cards — lightweight snippets pointing to /products -->
+      <li class="product-card">
+        <img src="{{ url_for('static', filename='images/sunflower.jpg') }}" alt="Sunflower Oil" loading="lazy">
+        <h3>Sunflower Oil</h3>
+        <p>Light, heart-friendly oil great for everyday cooking.</p>
+        <div class="card-actions">
+          <a class="btn small" href="{{ url_for('products') }}#sunflower">View</a>
+          <a class="btn small" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Sunflower%20Oil">Buy</a>
+        </div>
+      </li>
+
+      <li class="product-card">
+        <img src="{{ url_for('static', filename='images/groundnut.jpg') }}" alt="Groundnut Oil" loading="lazy">
+        <h3>Groundnut Oil</h3>
+        <p>Rich flavour for traditional Indian cooking and frying.</p>
+        <div class="card-actions">
+          <a class="btn small" href="{{ url_for('products') }}#groundnut">View</a>
+          <a class="btn small" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Groundnut%20Oil">Buy</a>
+        </div>
+      </li>
+
+      <li class="product-card">
+        <img src="{{ url_for('static', filename='images/coconut.jpg') }}" alt="Coconut Oil" loading="lazy">
+        <h3>Coconut Oil</h3>
+        <p>Cold-pressed coconut oil for cooking & hair care.</p>
+        <div class="card-actions">
+          <a class="btn small" href="{{ url_for('products') }}#coconut">View</a>
+          <a class="btn small" href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20order%20Coconut%20Oil">Buy</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container">
+    <h2>Why Choose Prakrutik Tattva?</h2>
+    <p>Our oils are made using traditional wooden pressing methods — preserving nutrients and natural flavor without chemicals or high-heat refining.</p>
+    <ul class="benefits">
+      <li>Cold-pressed to retain nutrients</li>
+      <li>No chemical solvents or bleaching</li>
+      <li>Locally sourced seeds and sustainable practices</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

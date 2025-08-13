@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Prakrutik Tattva — 100% wood-pressed edible oils. Pure, natural oils made the traditional way." />
+  <title>{% block title %}Prakrutik Tattva{% endblock %}</title>
+
+  <!-- Open Graph / SEO basics -->
+  <meta property="og:title" content="Prakrutik Tattva — Pure. Natural. Prakrutik." />
+  <meta property="og:description" content="100% wood-pressed edible oils — handcrafted, natural, and healthy." />
+  <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ url_for('home') }}" class="brand">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Prakrutik Tattva logo" class="logo">
+        <span class="brand-name">Prakrutik Tattva</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('products') }}">Products</a></li>
+          <li><a href="{{ url_for('why_us') }}">Why Choose Us</a></li>
+          <li><a href="{{ url_for('process') }}">Our Process</a></li>
+          <li><a href="{{ url_for('blog') }}">Blog</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="whatsapp-cta" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Prakrutik%20Tattva%2C%20I%20want%20to%20order%20your%20oil." aria-label="Order on WhatsApp">
+        Order Now
+      </a>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="logo" class="footer-logo">
+          <p>Prakrutik Tattva — 100% wood-pressed edible oils. Pure. Natural. Prakrutik.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="{{ url_for('products') }}">Products</a></li>
+            <li><a href="{{ url_for('why_us') }}">Why Choose Us</a></li>
+            <li><a href="{{ url_for('process') }}">Our Process</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Phone: +91XXXXXXXXXX</p>
+          <p>Email: hello@prakrutiktattva.example</p>
+          <p><a href="https://wa.me/91XXXXXXXXXX">WhatsApp us</a></p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; {{ current_year if current_year is defined else "2025" }} Prakrutik Tattva. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
