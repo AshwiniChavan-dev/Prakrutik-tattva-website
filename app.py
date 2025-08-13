@@ -22,7 +22,8 @@ with app.app_context():
 
 @app.route('/')
 def home():
-    return "Database file should now exist in your folder."
+    return render_template("base.html")  # This will load base.html
 
 if __name__ == '__main__':
+
     app.run(debug=True)
