@@ -34,7 +34,27 @@ with app.app_context():
 # -------------------------
 @app.route('/')
 def home():
-    return render_template("base.html")  # This will load base.html from /templates
+    return render_template("base.html")
+
+@app.route('/products')
+def products():
+    return render_template("products.html")
+
+@app.route('/why-us')
+def why_us():
+    return render_template("why_us.html")
+
+@app.route('/process')
+def process():
+    return render_template("process.html")
+
+@app.route('/blog')
+def blog():
+    return render_template("blog.html")
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
 
 # Example route to add a product (optional)
 @app.route('/add-sample')
