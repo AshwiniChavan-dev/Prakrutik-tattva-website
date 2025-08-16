@@ -19,8 +19,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="{{ url_for('home') }}" class="brand">
-        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Prakrutik Tattva logo" class="logo">
-        <span class="brand-name">Prakrutik Tattva</span>
+        <div class="logo">
+          <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Prakrutik Tattva logo">
+        </div>
+          <span class="brand-name">Prakrutik Tattva</span>
       </a>
 
       <nav class="main-nav" aria-label="Main navigation">
@@ -77,5 +79,6 @@
   </footer>
 </body>
 </html>
+
 
 
