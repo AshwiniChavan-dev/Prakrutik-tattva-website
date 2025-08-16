@@ -242,7 +242,7 @@ footer {
 
 /* Limit logo size */
 .logo img {
-    max-width: 150px;
+    max-width: 15px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -273,3 +273,4 @@ nav ul li a {
 nav ul li a:hover {
     color: yellow;
 }
+
